@@ -1,0 +1,3 @@
+export HISTCONTROL=ignoreboth:erasedups
+alias ll="ls -lAFh --group-directories-first"
+alias nano="nano -cw"

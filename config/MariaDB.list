@@ -1,0 +1,3 @@
+# https://mariadb.org/download/?t=repo-config&d=22.04+%22jammy%22&v=10.6&r_m=gigenet
+deb [signed-by=/etc/apt/trusted.gpg.d/mariadb_release_signing_key.asc] https://mirrors.gigenet.com/mariadb/repo/10.6/ubuntu jammy main
+deb-src [signed-by=/etc/apt/trusted.gpg.d/mariadb_release_signing_key.asc] https://mirrors.gigenet.com/mariadb/repo/10.6/ubuntu jammy main
