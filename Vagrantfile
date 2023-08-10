@@ -17,13 +17,13 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = settings[:machine][:hostname]
 
   settings[:forwarded_ports].each do |port_options|
-    config.vm.network :forwarded_port, port_options
+    config.vm.network :forwarded_port, **port_options
   end
 
   config.vm.synced_folder settings[:synced_folder][:host], settings[:synced_folder][:guest], owner: "vagrant", group: "vagrant"
 
   settings[:copy_files].each do |file_options|
-    config.vm.provision :file, file_options
+    config.vm.provision :file, **file_options
   end unless settings[:copy_files].nil?
 
   config.vm.provision :shell, path: "provision.sh", env: {
