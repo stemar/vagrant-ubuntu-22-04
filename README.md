@@ -48,7 +48,7 @@ vagrant ssh
     - Multiple Vagrant boxes can be run concurrently from separate terminal tabs.
     - Avoid port collision by editing `:forwarded_ports` values in `settings.yaml`.
 - Copied SSH keys to use the same in and out of VM.
-- Copied Git and Subversion configurations to use the same in and out of VM.
+- Copied Git configurations to use the same in and out of VM.
 - Synchronized projects/code directories.
 - Apache serves any local website at `http://domain.com.localhost:8000` with [VirtualDocumentRoot](https://httpd.apache.org/docs/2.4/mod/mod_vhost_alias.html).
 - Add more VirtualHost blocks from the host machine and re-provision the Vagrant box.
@@ -65,13 +65,12 @@ vagrant ssh
 - [VirtualBox 6+ Extension Pack](https://www.virtualbox.org/wiki/Downloads)
 - [Vagrant 2+](https://www.vagrantup.com/downloads.html)
 
-SSH keys, Git config and Subversion config settings from host machine are copied in virtual machine.
+SSH keys, Git config settings from host machine are copied in virtual machine.
 
 Check if you have them on your host machine:
 
 ```bash
 ll ~/.ssh
-ll ~/.subversion
 cat ~/.gitconfig
 ```
 
@@ -85,8 +84,7 @@ Edit values in `settings.yaml`.
 - Add arrays to the `:forwarded_ports` value if necessary.
     - Ex.: Change the forwarded ports of this virtual machine to avoid port collision if you have multiple virtual machines running at the same time.
 - Change `:synced_folder` values to match your host machine pathname.
-- Edit the `:copy_files` values:
-    - Ex.: Remove the Subversion array if you don't have it on your host machine.
+- Edit the `:copy_files` values.
 - Edit the `:php_error_reporting` value if necessary.
 
 Edit `config` files if needed.
