@@ -5,29 +5,28 @@
   :memory: 3072 # 3GB RAM
   :cpus: 1
   :hostname: ubuntu-22-04
-  :timezone: Canada/Pacific
+  :timezone: America/Los_Angeles
 
 :forwarded_ports:
-# SSH
-- :id: ssh
-  :host: 2200
-  :guest: 22
-# HTTP
-- :host: 8000
-  :guest: 80
-# MySQL
-- :host: 33060
-  :guest: 3306
+  - :id: ssh
+    :host: 2200
+    :guest: 22
+  - :host: 8000
+    :guest: 80
+  - :host: 33060
+    :guest: 3306
 
 :synced_folder:
   :host: ~/Code
   :guest: /home/vagrant/Code
+  :owner: vagrant
+  :group: vagrant
 
 :copy_files:
-- :source: ~/.ssh
-  :destination: ~/.ssh
-- :source: ~/.gitconfig
-  :destination: ~/.gitconfig
+  - :source: ~/.ssh
+    :destination: ~/.ssh
+  - :source: ~/.gitconfig
+    :destination: ~/.gitconfig
 
-:php_error_reporting: E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT
+:php_error_reporting: E_ALL & ~E_NOTICE & ~E_DEPRECATED
 ...

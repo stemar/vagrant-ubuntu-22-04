@@ -3,7 +3,7 @@
 Make a Vagrant box with Ubuntu 22.04 LAMP stack, plus configure it for development.
 
 - Host: Linux or Mac.
-- Guest: Ubuntu 22.04, Apache 2.4, MariaDB 10.6, PHP 8.2, Git 2+.
+- Guest: Ubuntu 22.04, Apache 2.4, MariaDB 10.6, PHP 8.2, Python 3.10, Git 2.x.
 
 - Leave code and version control files physically outside the VM while virtually accessing them inside the VM.
 - Use any GUI tool (IDEs, browsers, database administration applications, Git clients) outside the VM to access code and data inside the VM.
@@ -209,6 +209,8 @@ php -i
 
 ### Browse local websites
 
+_If needed, replace the port matching the host HTTP port in `settings.yaml`._
+
 #### Check localhost
 
 <http://localhost:8000>
@@ -224,7 +226,7 @@ You see the "Apache2 Ubuntu Default Page".
 
 #### Check your domain(s)
 
-Replace `domain.com` with your domain and your custom forwarded port number.
+Replace `domain.com` with your domain.
 
 <http://domain.com.localhost:8000>
 
