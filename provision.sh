@@ -65,7 +65,7 @@ if [ ! -d /usr/share/adminer ]; then
     curl -LsS https://raw.githubusercontent.com/vrana/adminer/master/plugins/login-password-less.php -o /usr/share/adminer/adminer-plugins/login-password-less.php
     curl -LsS https://raw.githubusercontent.com/vrana/adminer/master/plugins/dump-json.php -o /usr/share/adminer/adminer-plugins/dump-json.php
     curl -LsS https://raw.githubusercontent.com/vrana/adminer/master/plugins/pretty-json-column.php -o /usr/share/adminer/adminer-plugins/pretty-json-column.php
-    curl -LsS https://raw.githubusercontent.com/vrana/adminer/master/designs/nicu/adminer.css -o /usr/share/adminer/adminer.css
+    curl -LsS https://raw.githubusercontent.com/vrana/adminer/master/designs/lavender-light/adminer.css -o /usr/share/adminer/adminer.css
 fi
 cp /vagrant/config/adminer.php /usr/share/adminer/adminer.php
 cp /vagrant/config/adminer-plugins.php /usr/share/adminer/adminer-plugins.php
