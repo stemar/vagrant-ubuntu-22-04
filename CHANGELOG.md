@@ -2,6 +2,10 @@
 
 ## 1.0.3 - 2026-01-19
 
+### Added
+
+- Added Ruby.
+
 ### Changed
 
 - Changed Adminer theme.
