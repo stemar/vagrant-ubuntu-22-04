@@ -1,3 +1,3 @@
 export HISTCONTROL=ignoreboth:erasedups
-alias ll="ls -lAFh --group-directories-first"
+alias ll="LC_ALL=C ls -lAFh --group-directories-first --color=auto"
 alias nano="nano -cw"

@@ -1,5 +1,26 @@
 # Changelog
 
+## 1.1 - 2026-02-07
+
+### Added
+
+- Added `config/php.ini` that will be located in `/var/www` to override Apache's `php.ini`
+- Added `PHPINIDir` and `SetEnv PHP_INI_SCAN_DIR` in `config/virtualhost.conf`
+- New `PHP_VERSION` is handled in `provision.sh`
+
+### Changed
+
+- Modified alias `ll` in `config/bash_aliases`
+- Updated `README.md`
+
+### Removed
+
+- Deleted `config/php.ini.htaccess`
+    - `.htaccess` is no longer used to override Apache's `php.ini`
+- Removed `:php_error_reporting` from `settings.yaml`
+- Removed `PHP_ERROR_REPORTING` from `Vagrantfile`
+- Removed `PHP_ERROR_REPORTING_INT` and its handling from `provision.sh`
+
 ## 1.0.3 - 2026-01-19
 
 ### Added

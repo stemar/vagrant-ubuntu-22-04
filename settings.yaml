@@ -27,6 +27,4 @@
     :destination: ~/.ssh
   - :source: ~/.gitconfig
     :destination: ~/.gitconfig
-
-:php_error_reporting: E_ALL & ~E_NOTICE & ~E_DEPRECATED
 ...
