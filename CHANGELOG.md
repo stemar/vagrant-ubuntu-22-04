@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.1 - 2026-03-18
+
+### Added
+
+- Chown `www-data` the `/var/lib/php/sessions` in `provision.sh` to allow Apache to write PHP sessions.
+
 ## 1.1.0 - 2026-02-07
 
 ### Added
