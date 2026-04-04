@@ -56,6 +56,7 @@ a2enmod php8.2 &>/dev/null
 sed -i 's|PHP_VERSION|8\.2|' /etc/apache2/sites-available/virtualhost.conf
 cp /vagrant/config/php.ini /var/www/php.ini
 chown -R www-data:www-data /var/lib/php/sessions
+chmod 1733 /var/lib/php/sessions
 
 echo '==> Installing Adminer'
 
